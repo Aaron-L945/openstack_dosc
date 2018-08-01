@@ -1,0 +1,35 @@
+安装依赖
+
+这几个都是./configure过程中安装不下去需要安装的包，不过都会给出提示，哪些包需要安装
+
+# yum install libnl-devel
+
+#yum install libxml2-devel
+
+#yum install -y yajl-devel
+
+#yum install device-mapper-devel
+
+#yum install libpciaccess-devel
+
+下载源码包    libvirt-4.4.0.tar.xz  链接在    这里
+
+xz -d libvirt-4.4.0.tar.xz
+
+tar -xvf libvirt-4.4.0.tar
+
+cd libvirt-4.4.0
+
+#./autogen.sh --system
+
+make
+
+make install
+
+
+
+将libvirtd 添加开机启动
+
+systemctl start libvirtd
+
+systemctl enable libvirtd
